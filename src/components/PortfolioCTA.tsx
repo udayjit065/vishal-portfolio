@@ -31,17 +31,17 @@ export default function PortfolioCTA() {
                 className="relative"
               >
                 {/* Folder shape */}
-                <div className="relative w-[280px] md:w-[340px] mx-auto">
+                <div className="relative w-[340px] md:w-[520px] mx-auto">
                   {/* Folder tab */}
-                  <div className="absolute -top-6 left-6 w-24 h-8 bg-brand-blue rounded-t-xl" />
+                  <div className="absolute -top-6 left-6 md:-top-8 md:left-8 w-28 md:w-36 h-8 md:h-10 bg-brand-blue rounded-t-xl" />
                   {/* Folder body */}
-                  <div className="relative bg-brand-blue rounded-2xl p-8 pt-6 shadow-2xl shadow-brand-blue/30 group-hover:shadow-brand-blue/50 transition-shadow duration-500">
+                  <div className="relative bg-brand-blue rounded-2xl p-10 pt-10 shadow-2xl shadow-brand-blue/30 group-hover:shadow-brand-blue/50 transition-shadow duration-500 min-h-[220px] md:min-h-[280px] flex flex-col justify-end">
                     {/* Files peeking out */}
-                    <div className="absolute -top-3 left-8 right-8 h-16 bg-white/20 rounded-t-lg overflow-hidden">
-                      <div className="flex gap-1 p-2">
-                        <div className="w-full h-2 bg-white/30 rounded" />
-                        <div className="w-full h-2 bg-white/20 rounded" />
-                        <div className="w-full h-2 bg-white/25 rounded" />
+                    <div className="absolute -top-3 md:-top-5 left-12 right-12 md:left-16 md:right-16 h-16 bg-white/20 rounded-t-lg overflow-hidden">
+                      <div className="flex gap-1.5 p-3">
+                        <div className="w-full h-3 bg-white/30 rounded" />
+                        <div className="w-full h-3 bg-white/20 rounded" />
+                        <div className="w-full h-3 bg-white/25 rounded" />
                       </div>
                     </div>
 
