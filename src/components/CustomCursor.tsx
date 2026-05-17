@@ -20,6 +20,7 @@ export default function CustomCursor() {
     const isTouchDevice = "ontouchstart" in window;
     if (isTouchDevice) return;
 
+    // eslint-disable-next-line
     setIsVisible(true);
 
     const moveCursor = (e: MouseEvent) => {

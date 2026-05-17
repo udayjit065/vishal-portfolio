@@ -15,6 +15,8 @@ const socialLinks = [
   { name: "in", href: "https://www.linkedin.com/in/vishal-s-94648025b/" },
 ];
 
+const MotionLink = motion(Link);
+
 function AnimatedLink({
   text,
   href,
@@ -37,7 +39,8 @@ function AnimatedLink({
     }),
   };
 
-  const Comp = isExternal ? motion.a : motion(Link);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const Comp: any = isExternal ? motion.a : MotionLink;
 
   return (
     <Magnetic>
@@ -107,6 +110,7 @@ export default function Navbar() {
             <a
               href={link.href}
               target={link.href.startsWith("http") ? "_blank" : undefined}
+              rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
               className="text-sm font-bold text-white/50 hover:text-white transition-colors mix-blend-difference"
             >
               {link.name}
