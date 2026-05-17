@@ -1,23 +1,18 @@
 "use client";
 
 import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
 import Experience from "@/components/Experience";
-import PortfolioCTA from "@/components/PortfolioCTA";
 import Footer from "@/components/Footer";
-import IntroLoader from "@/components/IntroLoader";
 import CustomCursor from "@/components/CustomCursor";
 
-export default function Home() {
+export default function ExperiencePage() {
   return (
     <>
-      <IntroLoader />
       <CustomCursor />
       <main className="relative min-h-screen bg-bg-warm">
         <Navbar />
-        <Hero />
+        <div className="pt-28" />
         <Experience />
-        <PortfolioCTA />
         <Footer />
       </main>
     </>

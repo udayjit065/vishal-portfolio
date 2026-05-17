@@ -1,26 +1,77 @@
 @import "tailwindcss";
 
+@theme {
+  --color-bg-warm: #faf6ef;
+  --color-bg-grey: #f4f4f4;
+  --color-brand-orange: #ffbc95;
+  --color-brand-blue: #2e54fe;
+  --color-brand-grey: #96908c;
+  --color-bg-cold: #e8e9ef;
+  --color-orange-2: #f99e76;
+  --color-dark: #1a1a1a;
+
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-display: var(--font-syne), system-ui, sans-serif;
+  --font-serif: var(--font-playfair), Georgia, serif;
+
+  --radius-4vw: 4vw;
+  --radius-5rem: 5rem;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: var(--color-bg-warm);
+  --foreground: var(--color-brand-grey);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  cursor: none;
+}
+
+a, button, [data-cursor-hover] {
+  cursor: none;
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(104, 104, 104, 0.07);
+  backdrop-filter: blur(11px);
+  -webkit-backdrop-filter: blur(11px);
+}
+
+.glass-dark {
+  background: rgba(37, 37, 37, 0.34);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+}
+
+/* Lenis CSS */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Selection */
+::selection {
+  background-color: #ffbc95;
+  color: #1a1a1a;
 }
