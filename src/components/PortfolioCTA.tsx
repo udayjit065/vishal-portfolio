@@ -31,7 +31,7 @@ export default function PortfolioCTA() {
                 className="relative"
               >
                 {/* Folder shape */}
-                <div className="relative w-[340px] md:w-[520px] mx-auto">
+                <div className="relative w-[280px] min-[400px]:w-[340px] md:w-[520px] mx-auto">
                   {/* Folder tab */}
                   <div className="absolute -top-6 left-6 md:-top-8 md:left-8 w-28 md:w-36 h-8 md:h-10 bg-brand-blue rounded-t-xl" />
                   {/* Folder body */}
